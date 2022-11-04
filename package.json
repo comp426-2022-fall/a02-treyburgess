@@ -1,0 +1,27 @@
+{
+  "name": "a02-treyburgess",
+  "version": "1.0.0",
+  "description": "assignment 2 comp426",
+  "main": "index.js",
+  "scripts": {
+    "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-fall/a02-treyburgess.git"
+  },
+  "author": "treyburgess",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-fall/a02-treyburgess/issues"
+  },
+  "bin": {
+    "galosh.js": "./cli.js"
+  },
+  "homepage": "https://github.com/comp426-2022-fall/a02-treyburgess#readme",
+  "dependencies": {
+    "minimist": "^1.2.7",
+    "moment-timezone": "^0.5.37",
+    "node-fetch": "^3.2.10"
+  }
+}
