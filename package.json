@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "assignment 2 comp426",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
   },
