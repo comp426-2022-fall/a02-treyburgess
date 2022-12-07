@@ -35,6 +35,8 @@ if (typeof day == 'undefined') {
 if (json) {
 	const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + north + '&longitude=' + east + '&daily=weathercode&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&timezone=' + timezone + '&past_days=1');
 	  var json_data = await response.json()
+	  json_data.latitude = parseFloat((json_data.latitude).toFixed(3));
+	  json_data.longitude = parseFloat((json_data.longitude).toFixed(3));
 	  console.log(json_data);
 	  process.exit(0);
 }
