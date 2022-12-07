@@ -12,7 +12,7 @@ const help = args.h || 1
 var north = args.n || args.s
 var east = args.e || args.w
 var timezone = args.z
-var day = args.d || 1
+var day = args.d
 var json = args.j
 
 if (help !== 1) {
@@ -28,12 +28,13 @@ if (help !== 1) {
 if (typeof timezone == 'undefined') {
 	timezone = moment.tz.guess();
 }
+if (typeof day == 'undefined') {
+	day = 1;
+}
 
 if (json) {
 	const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + north + '&longitude=' + east + '&daily=weathercode&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&timezone=' + timezone + '&past_days=1');
-	  var json_data = await response.json();
-	  json_data.latitude = parseFloat((json_data.latitude).toFixed(3));
-	  json_data.longitude = parseFloat((json_data.longitude).toFixed(3));
+	  var json_data = await response.json()
 	  console.log(json_data);
 	  process.exit(0);
 }
